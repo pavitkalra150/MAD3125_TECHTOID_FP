@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".LoginPageActivity">
 
+
+    <ImageView
+        android:id="@+id/imgloginPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/titleLoginPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="25dp"
+        android:textColor="@color/theme2_primary"
+        app:layout_constraintTop_toBottomOf="@id/imgloginPage"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter Your User Name"
+        android:ems="13"
+        android:textSize="20sp"
+        android:backgroundTint="@color/theme2_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleLoginPage"
+
+        />
+    <ImageView
+        android:id="@+id/nextIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_arrow_circle_right_24"
+        app:layout_constraintTop_toBottomOf="@id/titleLoginPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_name"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
