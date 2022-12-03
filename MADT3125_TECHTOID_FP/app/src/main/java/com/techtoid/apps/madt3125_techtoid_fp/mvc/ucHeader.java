@@ -2,6 +2,8 @@ package com.techtoid.apps.madt3125_techtoid_fp.mvc;
 
 import android.os.Handler;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class ucHeader {
     public static class ucConstants {
         public static class ucDuration {
