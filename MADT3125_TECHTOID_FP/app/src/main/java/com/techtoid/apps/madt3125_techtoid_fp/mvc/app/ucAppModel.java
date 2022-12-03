@@ -1,4 +1,17 @@
 package com.techtoid.apps.madt3125_techtoid_fp.mvc.app;
 
-public class ucAppModel {
+import android.content.Context;
+
+import com.techtoid.apps.madt3125_techtoid_fp.mvc.ucHeader;
+
+public class ucAppModel extends ucHeader {
+    public static class ucContext {
+        protected static Context _context;
+        public static void setApplicationContext(Context context) {
+            _context = context;
+        }
+        public static Context getApplicationContext() {
+            return _context;
+        }
+    }
 }

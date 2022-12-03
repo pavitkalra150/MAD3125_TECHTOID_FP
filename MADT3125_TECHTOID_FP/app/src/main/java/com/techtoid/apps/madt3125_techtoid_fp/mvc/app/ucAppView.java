@@ -1,4 +1,6 @@
 package com.techtoid.apps.madt3125_techtoid_fp.mvc.app;
 
-public class ucAppView {
+import com.techtoid.apps.madt3125_techtoid_fp.mvc.ucHeader;
+
+public class ucAppView extends ucHeader {
 }
