@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/theme_secondary"
+    android:background="@color/theme1_secondary"
     tools:context=".LoadingPageActivity">
 
     <ImageView
@@ -23,7 +23,7 @@
         android:id="@+id/prgsbr_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/theme_primary"
+        android:indeterminateTint="@color/theme1_primary"
         android:scaleX="1.5"
         android:scaleY="1.5"
         app:layout_constraintStart_toStartOf="parent"
