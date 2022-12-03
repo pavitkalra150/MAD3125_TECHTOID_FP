@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MADT3125_TECHTOID_FP"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoadingPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
