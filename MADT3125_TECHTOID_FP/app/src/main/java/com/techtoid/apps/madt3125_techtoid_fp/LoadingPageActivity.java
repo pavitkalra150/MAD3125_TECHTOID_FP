@@ -20,6 +20,6 @@ public class LoadingPageActivity extends AppCompatActivity {
         super.onStart();
         ucHeader.ucRunner.ucDelay(()->
                 ucAppController.ucIntent.ucStartActivity(LoginPageActivity.class),
-                ucHeader.ucConstants.ucDuration.MEDIUM);
+                ucHeader.ucConstants.ucDuration.SHORT);
     }
 }

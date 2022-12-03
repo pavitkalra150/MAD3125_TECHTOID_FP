@@ -9,7 +9,8 @@ public class ucHeader {
         public static class ucDuration {
             public static final long LONG = 5000;
             public static final long MEDIUM = 3000;
-            public static final long SHORt = 1000;
+            public static final long SHORT = 2000;
+            public static final long XSHORT = 1000;
         }
     }
     public static class ucRunner {
