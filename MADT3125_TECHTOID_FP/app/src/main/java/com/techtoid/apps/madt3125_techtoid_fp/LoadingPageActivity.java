@@ -12,14 +12,14 @@ public class LoadingPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loadingpage);
-        ucAppModel.ucContext.setActivityContext(LoadingPageActivity.this);
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
+        ucAppModel.ucContext.setCurrentActivityContext(LoadingPageActivity.this);
         ucHeader.ucRunner.ucDelay(()->
                 ucAppController.ucIntent.ucStartActivity(LoginPageActivity.class),
-                ucHeader.ucConstants.ucDuration.SHORT);
+                ucHeader.ucConstants.ucDuration.XSHORT);
     }
 }

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ucHeader {
     public static class ucConstants {
         public static class ucDuration {
+            public static final long XLONG = 10000;
             public static final long LONG = 5000;
             public static final long MEDIUM = 3000;
             public static final long SHORT = 2000;
