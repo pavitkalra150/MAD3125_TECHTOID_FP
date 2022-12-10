@@ -13,6 +13,15 @@
         android:theme="@style/Theme.MADT3125_TECHTOID_FP"
         tools:targetApi="28">
         <activity
+            android:name=".HomePageActivity"
+            android:exported="false">
+
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LoginPageActivity"
             android:exported="false">
             <meta-data
@@ -34,7 +43,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
