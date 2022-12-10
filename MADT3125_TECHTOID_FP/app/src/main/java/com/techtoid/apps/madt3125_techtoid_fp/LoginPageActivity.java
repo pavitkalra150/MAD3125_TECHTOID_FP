@@ -1,6 +1,8 @@
 package com.techtoid.apps.madt3125_techtoid_fp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -27,7 +29,7 @@ public class LoginPageActivity extends AppCompatActivity {
     public void nextClicked(View view) {
         vLoginPageView.NextButtonClicked();
         if(vLoginPageView.userIsAuthenticated) {
-            vLoginPageView.startHomePageActivity();
+            startActivity(new Intent(LoginPageActivity.this,RegistrationPageActivity.class));
             finish();
         }
     }
