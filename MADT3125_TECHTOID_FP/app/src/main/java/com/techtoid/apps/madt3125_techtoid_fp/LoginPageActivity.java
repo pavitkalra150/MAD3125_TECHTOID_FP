@@ -16,8 +16,10 @@ public class LoginPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_loginpage);
         vLoginPageView.initUIComponents(
                 findViewById(R.id.txtvw_heading_label),
+                findViewById(R.id.txtvw_back2username),
                 findViewById(R.id.edtxt_login_input),
-                findViewById(R.id.btn_icon_next));
+                findViewById(R.id.imgbtn_next),
+                findViewById(R.id.prgsbr_login));
     }
 
     @Override
@@ -27,10 +29,14 @@ public class LoginPageActivity extends AppCompatActivity {
     }
 
     public void nextClicked(View view) {
-        vLoginPageView.NextButtonClicked();
+        vLoginPageView.NextButtonClicked(view);
         if(vLoginPageView.userIsAuthenticated) {
-            startActivity(new Intent(LoginPageActivity.this,RegistrationPageActivity.class));
-            finish();
+            vLoginPageView.startHomePageActivity(RegistrationPageActivity.class);
+//            startActivity(new Intent(LoginPageActivity.this,RegistrationPageActivity.class));
+//            finish();
         }
+    }
+    public void backClicked(View view) {
+        vLoginPageView.BackButtonClicked(view);
     }
 }

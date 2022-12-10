@@ -14,7 +14,7 @@ public class LoadingPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loadingpage);
-        vLoadingPageView.setActivityContext(LoadingPageActivity.this);
+//        vLoadingPageView.setActivityContext(LoadingPageActivity.this);
     }
 
     @Override
@@ -24,6 +24,6 @@ public class LoadingPageActivity extends AppCompatActivity {
         (new Handler()).postDelayed(()-> {
             startActivity(new Intent(LoadingPageActivity.this, LoginPageActivity.class));
             finish();
-        },1000);
+        },2000);
     }
 }

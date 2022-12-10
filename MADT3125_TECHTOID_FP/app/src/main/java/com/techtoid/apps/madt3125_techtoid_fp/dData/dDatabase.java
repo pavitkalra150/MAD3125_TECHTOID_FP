@@ -47,6 +47,7 @@ public class dDatabase {
     public static class Storage {
         public static void loadDatabase() {
             Users.addUserToList("admin","Administrator","admin");
+            Users.addUserToList("880853","Rishi Varma","varma");
             Users.addUserToList("868150","Pavit","kalra");
             Users.addUserToList("880437","Sai Sumanth","nissankara");
             Users.addUserToList("870768","Simran","mehra");
