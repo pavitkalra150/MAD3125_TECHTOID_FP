@@ -44,12 +44,14 @@ public class vLoginPageView extends vPageView {
         }
     }
     public static void startHomePageActivity() {
+        uiHeadingLabel.setText("Successfully Logged In");
         //TODO : @RishiVarma : Create Intent and Start New Activity
     }
     public static void setUIInputError(String message) {
         //TODO : @SaiSumanth : Implement UI modification code for setting EditText Input Error
     }
     public static void setUItoPassword(String fullname) {
+        uiHeadingLabel.setText(fullname);
         //TODO : @SaiSumanth : Change Login UI Layout to Password with
     }
 }

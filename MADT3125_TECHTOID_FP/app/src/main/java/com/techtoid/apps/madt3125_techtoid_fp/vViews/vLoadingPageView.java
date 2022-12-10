@@ -10,6 +10,5 @@ import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cLoadingPageControlle
 public class vLoadingPageView extends vPageView{
     public static void onViewLoaded() {
         cLoadingPageController.loadData();
-        (new Handler()).postDelayed(()-> getActivityContext().startActivity(new Intent(getActivityContext(), LoginPageActivity.class)),1000);
     }
 }
