@@ -3,7 +3,8 @@ package com.techtoid.apps.madt3125_techtoid_fp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+
+import com.techtoid.apps.madt3125_techtoid_fp.vViews.vLoginPageView;
 
 public class LoginPageActivity extends AppCompatActivity {
 
@@ -11,7 +12,21 @@ public class LoginPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginpage);
+        vLoginPageView.initUIComponents(
+                findViewById(R.id.txtvw_heading_label),
+                findViewById(R.id.edtxt_login_input),
+                findViewById(R.id.btn_icon_next));
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        vLoginPageView.setActivityContext(LoginPageActivity.this);
+    }
+
     public void nextClicked(View view) {
+        vLoginPageView.NextButtonClicked();
+        if(vLoginPageView.userIsAuthenticated) vLoginPageView.startHomePageActivity();
+        finish();
     }
 }

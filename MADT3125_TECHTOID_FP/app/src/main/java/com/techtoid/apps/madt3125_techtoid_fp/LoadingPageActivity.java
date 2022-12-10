@@ -18,5 +18,6 @@ public class LoadingPageActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         vLoadingPageView.onViewLoaded();
+        finish();
     }
 }
