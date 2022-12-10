@@ -2,6 +2,7 @@ package com.techtoid.apps.madt3125_techtoid_fp.vViews;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.techtoid.apps.madt3125_techtoid_fp.mvc.vPageView;
@@ -10,11 +11,11 @@ import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cLoginPageController;
 public class vLoginPageView extends vPageView {
     private static TextView uiHeadingLabel;
     private static EditText uiLoginInput;
-    private static Button uiNextButton;
+    private static ImageView uiNextButton;
     enum State { USERNAME, PASSWORD }
     private static State LoginState = State.USERNAME;
     public static boolean userIsAuthenticated = false;
-    public static void initUIComponents(TextView textviewHeading, EditText editextLoginInput, Button buttonNext) {
+    public static void initUIComponents(TextView textviewHeading, EditText editextLoginInput, ImageView buttonNext) {
         uiHeadingLabel = textviewHeading;
         uiLoginInput = editextLoginInput;
         uiNextButton = buttonNext;

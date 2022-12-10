@@ -21,7 +21,9 @@ public class LoadingPageActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         vLoadingPageView.onViewLoaded();
-        (new Handler()).postDelayed(()-> startActivity(new Intent(LoadingPageActivity.this, LoginPageActivity.class)),1000);
-//        finish();
+        (new Handler()).postDelayed(()-> {
+            startActivity(new Intent(LoadingPageActivity.this, LoginPageActivity.class));
+            finish();
+        },1000);
     }
 }

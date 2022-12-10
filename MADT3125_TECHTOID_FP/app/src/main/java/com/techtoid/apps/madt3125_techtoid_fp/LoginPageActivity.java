@@ -26,7 +26,9 @@ public class LoginPageActivity extends AppCompatActivity {
 
     public void nextClicked(View view) {
         vLoginPageView.NextButtonClicked();
-        if(vLoginPageView.userIsAuthenticated) vLoginPageView.startHomePageActivity();
-        finish();
+        if(vLoginPageView.userIsAuthenticated) {
+            vLoginPageView.startHomePageActivity();
+            finish();
+        }
     }
 }
