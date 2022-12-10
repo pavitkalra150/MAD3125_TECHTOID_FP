@@ -26,8 +26,8 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // opening a Registration activity.
-                Intent i = new Intent(HomePageActivity.this, RegistrationPageActivity.class);
-                startActivity(i);
+
+                startActivity(new Intent(HomePageActivity.this, RegistrationPageActivity.class));
             }
         });
         final ArrayList<mListItem> arrayList = new ArrayList<mListItem>();
