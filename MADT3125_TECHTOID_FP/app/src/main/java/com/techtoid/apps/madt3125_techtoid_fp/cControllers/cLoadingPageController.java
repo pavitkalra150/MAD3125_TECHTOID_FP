@@ -6,4 +6,5 @@ public class cLoadingPageController {
     public static void loadData() {
         mLoadingPageModel.loadDataFromDatabase();
     }
+
 }
