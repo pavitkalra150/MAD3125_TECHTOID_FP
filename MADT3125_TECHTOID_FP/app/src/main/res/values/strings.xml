@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SUITS</string>
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Blue</item>
+        <item>Black</item>
+        <item>Grey</item>
+    </string-array>
 </resources>
