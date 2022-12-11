@@ -133,47 +133,16 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Employee Type"/>
-            <LinearLayout
-                android:layout_height="match_parent"
+            <Spinner
+                android:id="@+id/emp_type"
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_weight=".07"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                >
-                <Button
-                    android:id="@+id/programmer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginEnd="4dp"
-                    android:textColor="@color/white"
-                    android:text="programmer"
-                    android:backgroundTint="#373DE4"/>
-                <Button
-                    android:id="@+id/Tester"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:textSize="12dp"
-                    android:text="Tester"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#373DE4"/>
-                <Button
-                    android:id="@+id/Manager"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:textSize="12dp"
-                    android:text="Manager"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:backgroundTint="#373DE4"
-                    />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:entries="@array/emp_type"
+                android:padding="15dp"
+                android:background="@drawable/et_custom"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -257,41 +226,13 @@
                     android:text="Motorbike"
                     />
             </RadioGroup>
-            <RadioGroup
-                android:id="@+id/side_car"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Side Car"
-                    android:layout_marginLeft="30dp"
-                    />
-                <RadioButton
-                    android:id="@+id/yesSide"
-                    android:layout_width="wrap_content"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:text="Yes"
-                    android:layout_marginLeft="35dp"
-
-                    />
-                <RadioButton
-                    android:id="@+id/noSide"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No"
-                    android:layout_marginLeft="20dp"
-                    />
-            </RadioGroup>
-            <TextView
+            <CheckBox
+                android:layout_height="match_parent"
                 android:layout_width="wrap_content"
+                android:text="Side Car"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -384,12 +325,13 @@
 
             <Spinner
                 android:id="@+id/color"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:entries="@array/colors"
-                android:padding="20dp" />
+                android:padding="15dp"
+                android:background="@drawable/et_custom"/>
 
             <Button
                 android:id="@+id/btn_register"

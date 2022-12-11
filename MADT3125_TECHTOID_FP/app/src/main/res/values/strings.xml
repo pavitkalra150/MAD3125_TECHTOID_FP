@@ -8,4 +8,10 @@
         <item>Black</item>
         <item>Grey</item>
     </string-array>
+    <string-array name="emp_type">
+        <item>Manager</item>
+        <item>Programmer</item>
+        <item>Tester</item>
+
+    </string-array>
 </resources>
