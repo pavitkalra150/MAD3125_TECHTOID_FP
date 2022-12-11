@@ -31,7 +31,7 @@ public class LoginPageActivity extends AppCompatActivity {
     public void nextClicked(View view) {
         vLoginPageView.NextButtonClicked(view);
         if(vLoginPageView.userIsAuthenticated) {
-            vLoginPageView.startHomePageActivity(RegistrationPageActivity.class);
+            vLoginPageView.startHomePageActivity(HomePageActivity.class);
 //            startActivity(new Intent(LoginPageActivity.this,RegistrationPageActivity.class));
 //            finish();
         }
