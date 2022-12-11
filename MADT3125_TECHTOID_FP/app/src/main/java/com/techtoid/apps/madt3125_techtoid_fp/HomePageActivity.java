@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.techtoid.apps.madt3125_techtoid_fp.mModels.mListItem;
 import com.techtoid.apps.madt3125_techtoid_fp.mModels.mHomePageModel;
+import com.techtoid.apps.madt3125_techtoid_fp.vViews.vHomePageView;
 
 import java.util.ArrayList;
 
@@ -19,18 +20,9 @@ public class HomePageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-        FloatingActionButton addNewContactFAB = findViewById(R.id.idFABadd);
+        vHomePageView.initUIcomponents(findViewById(R.id.idFABadd), findViewById(R.id.listView));
 
-        // adding on click listener for our fab.
-        addNewContactFAB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // opening a Registration activity.
-
-                startActivity(new Intent(HomePageActivity.this, RegistrationPageActivity.class));
-            }
-        });
-        final ArrayList<mListItem> arrayList = new ArrayList<mListItem>();
+        ArrayList<mListItem> arrayList = new ArrayList<mListItem>();
 
 
         // the items are of the type NumbersView
@@ -50,5 +42,8 @@ public class HomePageActivity extends AppCompatActivity {
         // set the numbersViewAdapter for ListView
         numbersListView.setAdapter(numbersArrayAdapter);
     }
-
+    public void newOnClick(View v) {
+        startActivity(new Intent(HomePageActivity.this, RegistrationPageActivity.class));
     }
+
+}

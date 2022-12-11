@@ -38,11 +38,31 @@ public class dDatabase {
             return verfiedUser;
         }
     }
-    public class EmployeeClass {
-
-    }
     public static class Employees {
-
+        private static int IDcount = 1;
+        private static ArrayList<Employee> EmployeeList = new ArrayList<>();
+        public static void addNewEmployeeToEmployeeList(Employee employee) {
+            IDcount++;
+            EmployeeList.add(employee);
+        }
+        public static ArrayList<Employee> getEmployeeList() {
+            return EmployeeList;
+        }
+        public static Employee getEmployeeDataFromEmployeeList(int id) {
+            for(Employee employee : EmployeeList) {
+                if(employee.getID() == id) {
+                    return employee;
+                }
+            }
+            return null;
+        }
+        public static void updateEmployeeDetailsInEmployeeList(Employee employee) {
+            EmployeeList.set((employee.getID()-1),employee);
+        }
+        public static void deleteEmployeeFromEmployeeList(int id) {
+            EmployeeList.remove(id-1);
+        }
+        public static int getIDcount() { return IDcount; }
     }
     public static class Storage {
         public static void loadDatabase() {

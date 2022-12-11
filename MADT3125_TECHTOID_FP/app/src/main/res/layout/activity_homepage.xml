@@ -31,6 +31,7 @@
         app:fabCustomSize="60dp"
         app:tint="@color/white"
         android:layout_gravity="right"
+        android:onClick="newOnClick"
         />
 
 </LinearLayout>

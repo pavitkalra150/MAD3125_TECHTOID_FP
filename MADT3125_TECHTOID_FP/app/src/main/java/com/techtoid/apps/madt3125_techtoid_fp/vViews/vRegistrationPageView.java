@@ -73,10 +73,13 @@ public class vRegistrationPageView {
 
         if(!showError()){
            System.out.println("error");
+           return;
         }
         else{
             System.out.println("no error");
+            return;
         }
+
     }
 
 
