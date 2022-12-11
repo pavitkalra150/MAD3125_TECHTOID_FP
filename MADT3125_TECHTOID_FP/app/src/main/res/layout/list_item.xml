@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -15,11 +14,11 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:padding="20dp"
             android:src="@drawable/female"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
+            android:scaleX="1.6"
+            android:scaleY="1.6"
             />
 
         <LinearLayout
@@ -27,13 +26,17 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:orientation="vertical">
-
+            <Button
+                android:id="@+id/updatebtn"
+                android:layout_marginTop="5dp"
+                android:layout_width="80px"
+                android:layout_height="70px"
+                android:layout_marginStart="280dp"
+                android:background="@drawable/update" />
             <TextView
                 android:id="@+id/emp_name"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="bottom|left"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -42,14 +45,15 @@
 
             <TextView
                 android:id="@+id/emp_role"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:gravity="top|left"
+                android:text="Role"
                 android:textColor="@android:color/black"
                 android:textSize="18dp"
-                tools:ignore="RtlHardcoded"
-                android:text="Role"/>
+                tools:ignore="RtlHardcoded" />
+
+
 
         </LinearLayout>
 
