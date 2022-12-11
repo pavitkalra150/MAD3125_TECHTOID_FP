@@ -188,7 +188,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/et_custom"
-                android:inputType="numberDecimal"
+                android:inputType="text"
                 android:padding="15dp"
                 android:textSize="15sp" />
             <TextView
@@ -304,7 +304,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:padding="15dp"
-                android:inputType="numberDecimal"
+                android:inputType="text"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
             <TextView
@@ -321,7 +321,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:padding="15dp"
-                android:inputType="numberDecimal"
+                android:inputType="text"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
             <TextView
@@ -338,7 +338,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:padding="15dp"
-                android:inputType="number"
+                android:inputType="text"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
             <TextView
@@ -355,7 +355,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:padding="15dp"
-                android:inputType="number"
+                android:inputType="text"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
             <TextView
