@@ -1,13 +1,16 @@
 package com.techtoid.apps.madt3125_techtoid_fp;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+
+import com.techtoid.apps.madt3125_techtoid_fp.vViews.vLoginPageView;
+import com.techtoid.apps.madt3125_techtoid_fp.vViews.vRegistrationPageView;
 
 import java.util.Calendar;
 
@@ -18,6 +21,17 @@ public class RegistrationPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrationpage);
         final TextView DOB = findViewById(R.id.et_birthYear);
+
+        vRegistrationPageView.initUIComponents(
+                findViewById(R.id.et_fname),
+                findViewById(R.id.et_lname),
+                findViewById(R.id.et_salary),
+                findViewById(R.id.rg_gender),
+                findViewById(R.id.et_occupationrate),
+                findViewById(R.id.vehicle_model),
+                findViewById(R.id.plate_Number),
+                findViewById(R.id.color));
+
 
         DOB.setOnClickListener(new View.OnClickListener() {
 
@@ -41,5 +55,8 @@ public class RegistrationPageActivity extends AppCompatActivity {
                 mDatePicker.show();
             }
         });
+    }
+    public void onRegisterClick(View view){
+        vRegistrationPageView.RegisterIsClicked();
     }
 }

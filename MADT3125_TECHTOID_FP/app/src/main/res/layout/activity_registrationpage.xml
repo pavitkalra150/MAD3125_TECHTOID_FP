@@ -88,6 +88,7 @@
                 android:layout_marginRight="20dp"
                 android:text="Gender"/>
             <RadioGroup
+                android:id="@+id/rg_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -184,7 +185,7 @@
                 android:layout_marginRight="20dp"
                 android:text="Salary"/>
             <EditText
-                android:id="@+id/salary"
+                android:id="@+id/et_salary"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -195,13 +196,14 @@
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
             <TextView
+                android:id="@+id/oc_Rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Occupational Rate"/>
             <EditText
-                android:id="@+id/oc_Rate"
+                android:id="@+id/et_occupationrate"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -351,6 +353,7 @@
                 android:layout_marginBottom="30dp"
                 android:textColor="@android:color/white"
                 android:text="register"
+                android:onClick="onRegisterClick"
                 android:backgroundTint="#373DE4"/>
 
 
