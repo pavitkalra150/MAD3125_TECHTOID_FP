@@ -45,12 +45,12 @@ public class mHomePageModel extends ArrayAdapter<mListItem> {
             numbersImage.setImageResource(currentNumberPosition.getNumbersImageId());
 
             // then according to the position of the view assign the desired TextView 1 for the same
-            TextView textView1 = currentItemView.findViewById(R.id.emp_id);
-            textView1.setText(currentNumberPosition.getNumberInDigit());
+            TextView textView1 = currentItemView.findViewById(R.id.emp_name);
+            textView1.setText(currentNumberPosition.getmName());
 
             // then according to the position of the view assign the desired TextView 2 for the same
-            TextView textView2 = currentItemView.findViewById(R.id.emp_name);
-            textView2.setText(currentNumberPosition.getNumbersInText());
+            TextView textView2 = currentItemView.findViewById(R.id.emp_role);
+            textView2.setText(currentNumberPosition.getmRole());
 
             // then return the recyclable view
             return currentItemView;

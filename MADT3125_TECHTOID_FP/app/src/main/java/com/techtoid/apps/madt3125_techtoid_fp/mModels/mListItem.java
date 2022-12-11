@@ -6,16 +6,16 @@ public class mListItem {
         private int ivNumbersImageId;
 
         // TextView 1
-        private String mNumberInDigit;
+        private String mName;
 
         // TextView 1
-        private String mText;
+        private String mRole;
 
         // create constructor to set the values for all the parameters of the each single view
-        public mListItem(int NumbersImageId, String NumbersInDigit, String Text) {
+        public mListItem(int NumbersImageId, String Name, String Role) {
             ivNumbersImageId = NumbersImageId;
-            mNumberInDigit = NumbersInDigit;
-            mText = Text;
+            mName = Name;
+            mRole = Role;
         }
 
         // getter method for returning the ID of the imageview
@@ -24,13 +24,13 @@ public class mListItem {
         }
 
         // getter method for returning the ID of the TextView 1
-        public String getNumberInDigit() {
-            return mNumberInDigit;
+        public String getmName() {
+            return mName;
         }
 
         // getter method for returning the ID of the TextView 2
-        public String getNumbersInText() {
-            return mText;
+        public String getmRole() {
+            return mRole;
         }
     }
 

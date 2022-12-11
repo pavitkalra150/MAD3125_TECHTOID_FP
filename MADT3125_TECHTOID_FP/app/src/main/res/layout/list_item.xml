@@ -9,14 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        >
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            android:padding="16dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="20dp"
             android:src="@drawable/female"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
             />
 
         <LinearLayout
@@ -26,27 +29,27 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/emp_id"
+                android:id="@+id/emp_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="bottom|left"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 tools:ignore="RtlHardcoded"
-                android:text="Employee Id"/>
+                android:text="Name"/>
 
             <TextView
-                android:id="@+id/emp_name"
+                android:id="@+id/emp_role"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:gravity="top|left"
                 android:textColor="@android:color/black"
-                android:textSize="14sp"
+                android:textSize="18dp"
                 tools:ignore="RtlHardcoded"
-                android:text="Name"/>
+                android:text="Role"/>
 
         </LinearLayout>
 

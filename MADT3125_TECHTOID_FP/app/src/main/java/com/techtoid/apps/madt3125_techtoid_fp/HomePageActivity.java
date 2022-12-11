@@ -34,11 +34,11 @@ public class HomePageActivity extends AppCompatActivity {
 
 
         // the items are of the type NumbersView
-        arrayList.add(new mListItem(R.drawable.male, "1", "Rishi"));
-        arrayList.add(new mListItem(R.drawable.female, "2", "Simran"));
-        arrayList.add(new mListItem(R.drawable.male, "3", "Pavit"));
-        arrayList.add(new mListItem(R.drawable.male, "4", "Sai"));
-        arrayList.add(new mListItem(R.drawable.female, "5", "Emma"));
+        arrayList.add(new mListItem(R.drawable.male, "Rishi", "Developer"));
+        arrayList.add(new mListItem(R.drawable.female, "Simran", "Tester"));
+        arrayList.add(new mListItem(R.drawable.male, "Pavit", "Bug"));
+        arrayList.add(new mListItem(R.drawable.male, "Sai", "Developer"));
+        arrayList.add(new mListItem(R.drawable.female, "Emma", "Emma"));
 
         // creating the instance
         // the context and arrayList created above
