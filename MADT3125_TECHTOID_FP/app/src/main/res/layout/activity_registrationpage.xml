@@ -36,6 +36,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:padding="15dp"
+                android:focusable="false"
                 android:text="Employee ID"
                 android:gravity="center"
                 android:background="@drawable/et_custom"
