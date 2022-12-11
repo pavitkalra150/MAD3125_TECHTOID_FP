@@ -28,7 +28,7 @@ public class RegistrationPageActivity extends AppCompatActivity {
                 findViewById(R.id.et_salary),
                 findViewById(R.id.rg_gender),
                 findViewById(R.id.et_occupationrate),
-                findViewById(R.id.vehicle_model),
+                findViewById(R.id.car_category),
                 findViewById(R.id.plate_Number),
                 findViewById(R.id.color));
 
