@@ -11,20 +11,29 @@ import org.w3c.dom.Text;
 
 public class vRegistrationPageView {
 
+    private static EditText et_empID;
     private static EditText et_fname;
     private static EditText et_lname;
-    private static RadioGroup rg_gender;
+    private static EditText et_dob;
+    private static TextView tv_male;
+    private static TextView tv_female;
+    private static Spinner spnr_empType;
+    private static TextView tv_bonus1;
+    private static EditText et_bonus1;
+    private static TextView tv_bonus2;
+    private static EditText et_bonus2;
     private static EditText et_salary;
     private static EditText et_occupationrate;
+
     private static EditText vehicle_model;
     private static EditText plate_Number;
     private static Spinner color;
 
 
-    public static void initUIComponents(EditText firstName, EditText lastName, EditText salary, RadioGroup gender, EditText occupationRate, EditText vehicleModel, EditText plateNumber, Spinner colors){
+    public static void initUIComponents(EditText firstName, EditText lastName, EditText salary, EditText occupationRate, EditText vehicleModel, EditText plateNumber, Spinner colors){
        et_fname = firstName;
        et_lname = lastName;
-       rg_gender = gender;
+//       rg_gender = gender;
        et_salary = salary;
        et_occupationrate = occupationRate;
        vehicle_model = vehicleModel;
@@ -82,5 +91,7 @@ public class vRegistrationPageView {
 
     }
 
+    public static void GenderButtonClicked(View view) {
 
+    }
 }

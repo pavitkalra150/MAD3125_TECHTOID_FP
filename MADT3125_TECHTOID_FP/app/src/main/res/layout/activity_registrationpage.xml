@@ -100,6 +100,54 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Gender"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="100dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/image_button_left"
+                        android:src="@drawable/male"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtvw_btn_male"
+                        android:background="@drawable/image_button_left"
+                        android:backgroundTint="#DDDDDD"
+                        android:onClick="genderOnClick"
+                        android:alpha="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="100dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/image_button_right"
+                        android:src="@drawable/female"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtvw_btn_female"
+                        android:background="@drawable/image_button_right"
+                        android:backgroundTint="#DDDDDD"
+                        android:onClick="genderOnClick"
+                        android:alpha="0.75"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+<!--
             <RadioGroup
                 android:id="@+id/rg_gender"
                 android:layout_width="match_parent"
@@ -127,6 +175,7 @@
                     android:src="@drawable/female"/>
 
             </RadioGroup>
+-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -134,7 +183,7 @@
                 android:layout_marginRight="20dp"
                 android:text="Employee Type"/>
             <Spinner
-                android:id="@+id/emp_type"
+                android:id="@+id/spnr_emp_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -146,11 +195,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtvw_bonus1"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Clients"/>
             <EditText
-                android:id="@+id/clients"
+                android:id="@+id/edtxt_bonus1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -160,6 +211,26 @@
                 android:inputType="text"
                 android:padding="15dp"
                 android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtvw_bonus2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Travel Days"
+                android:visibility="gone"/>
+            <EditText
+                android:id="@+id/edtxt_bonus2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/et_custom"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textSize="15sp"
+                android:visibility="gone"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -195,7 +266,61 @@
                 android:inputType="numberDecimal"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
-            <RadioGroup
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Type"
+                android:layout_marginLeft="20dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="150dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/image_button_left"
+                    android:layout_marginStart="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:src="@drawable/car"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtvw_btn_car"
+                        android:background="@drawable/image_button_left"
+                        android:backgroundTint="#DDDDDD"
+                        android:onClick="genderOnClick"
+                        android:alpha="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="150dp"
+                    android:layout_height="54dp"
+                    android:layout_marginEnd="20dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/image_button_right"
+                        android:src="@drawable/motorcycle"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/txtvw_btn_motorcycle"
+                        android:background="@drawable/image_button_right"
+                        android:backgroundTint="#DDDDDD"
+                        android:onClick="genderOnClick"
+                        android:alpha="0.75"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+<!--            <RadioGroup
                 android:id="@+id/vehicle_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -203,12 +328,6 @@
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vehicle Type"
-                    android:layout_marginLeft="20dp"
-                    />
                 <RadioButton
                     android:id="@+id/car"
                     android:layout_marginLeft="20dp"
@@ -225,12 +344,8 @@
                     android:layout_height="wrap_content"
                     android:text="Motorbike"
                     />
-            </RadioGroup>
-            <CheckBox
-                android:layout_height="match_parent"
-                android:layout_width="wrap_content"
-                android:text="Side Car"
-                android:layout_gravity="center"/>
+        </RadioGroup>
+-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
