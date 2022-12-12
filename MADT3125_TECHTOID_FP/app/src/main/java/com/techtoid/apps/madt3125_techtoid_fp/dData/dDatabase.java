@@ -64,10 +64,10 @@ public class dDatabase {
         }
         public static int getIDcount() { return IDcount; }
         public static void initializeDataInDatabase() {
-//            EmployeeList.add(new Manager(IDcount++,"Rishi Varma",))
         }
     }
     public static class Storage {
+        File
         public static void loadDatabase() {
             Users.addUserToList("admin","Administrator","admin");
             Users.addUserToList("880853","Rishi Varma","varma");
@@ -78,7 +78,7 @@ public class dDatabase {
         public static void saveDatabase() {
 
         }
-        public static void pushDataFromFile() {
+        public static void pushDataToFile() {
 
         }
         public static void pullDataFromFile() {

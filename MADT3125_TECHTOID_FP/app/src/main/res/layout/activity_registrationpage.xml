@@ -459,7 +459,8 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 android:id="@+id/lnr_sidecar"
-                android:gravity="center">
+                android:gravity="center"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
