@@ -17,31 +17,31 @@ import org.w3c.dom.Text;
 
 public class vRegistrationPageView {
 
-    private static EditText et_empID;
-    private static EditText et_fname;
-    private static EditText et_lname;
-    private static TextView et_dob;
-    private static TextView tv_male;
-    private static TextView tv_female;
-    private static Spinner spnr_empType;
-    private static TextView tv_bonus1;
-    private static EditText et_bonus1;
-    private static TextView tv_bonus2;
-    private static EditText et_bonus2;
-    private static EditText et_salary;
-    private static EditText et_occupationrate;
-    private static TextView tv_car;
-    private static TextView tv_motorcycle;
-    private static Spinner spnr_vehicle_make;
-    private static TextView tv_carType;
-    private static Spinner spnr_carType;
-    private static Spinner spnr_category;
-    private static EditText et_plateNumber;
-    private static TextView tv_gearType;
-    private static Spinner spnr_gearType;
-    private static Spinner spnr_color;
-    private static LinearLayout lnr_sidecar;
-    private static CheckBox chckbx_sidecar;
+    public static EditText et_empID;
+    public static EditText et_fname;
+    public static EditText et_lname;
+    public static TextView et_dob;
+    public static TextView tv_male;
+    public static TextView tv_female;
+    public static Spinner spnr_empType;
+    public static TextView tv_bonus1;
+    public static EditText et_bonus1;
+    public static TextView tv_bonus2;
+    public static EditText et_bonus2;
+    public static EditText et_salary;
+    public static EditText et_occupationrate;
+    public static TextView tv_car;
+    public static TextView tv_motorcycle;
+    public static Spinner spnr_vehicle_make;
+    public static TextView tv_carType;
+    public static Spinner spnr_carType;
+    public static Spinner spnr_category;
+    public static EditText et_plateNumber;
+    public static TextView tv_gearType;
+    public static Spinner spnr_gearType;
+    public static Spinner spnr_color;
+    public static LinearLayout lnr_sidecar;
+    public static CheckBox chckbx_sidecar;
 
     public static boolean registrationIsSuccessful = false;
 
@@ -111,31 +111,31 @@ public class vRegistrationPageView {
     }
 
 
-    public static boolean showError(){
-        String fName = et_fname.getText().toString();
-        String lName = et_lname.getText().toString();
-        String salary = et_salary.getText().toString();
-        String occupationRate = et_occupationrate.getText().toString();
-//        String model = vehicle_model.getText().toString();
-//        String plate = plate_Number.getText().toString();
-
-
-        if(fName.isEmpty()){
-            et_fname.setError("Please give value for First Name");
-            return false;
-        }
-        if(lName.isEmpty()){
-            et_lname.setError("Please give value for Last Name");
-            return false;
-        }
-        if(salary.isEmpty()){
-            et_salary.setError("Please give value for Salary");
-            return false;
-        }
-        if(occupationRate.isEmpty()){
-            et_occupationrate.setError("Please give value for Occupation Rate");
-            return false;
-        }
+//    public static boolean showError(){
+//        String fName = et_fname.getText().toString();
+//        String lName = et_lname.getText().toString();
+//        String salary = et_salary.getText().toString();
+//        String occupationRate = et_occupationrate.getText().toString();
+////        String model = vehicle_model.getText().toString();
+////        String plate = plate_Number.getText().toString();
+//
+//
+//        if(fName.isEmpty()){
+//            et_fname.setError("Please give value for First Name");
+//            return false;
+//        }
+//        if(lName.isEmpty()){
+//            et_lname.setError("Please give value for Last Name");
+//            return false;
+//        }
+//        if(salary.isEmpty()){
+//            et_salary.setError("Please give value for Salary");
+//            return false;
+//        }
+//        if(occupationRate.isEmpty()){
+//            et_occupationrate.setError("Please give value for Occupation Rate");
+//            return false;
+//        }
 //        if(model.isEmpty()){
 //            vehicle_model.setError("Please give value for Vehicle Model");
 //            return false;
@@ -144,8 +144,8 @@ public class vRegistrationPageView {
 //            plate_Number.setError("Please give value for Plate number");
 //            return false;
 //        }
-        return true;
-    }
+//        return true;
+//    }
 
     public static void DateOfBirthClicked(View view) {
 
@@ -154,7 +154,7 @@ public class vRegistrationPageView {
 
     public static void RegisterIsClicked(){
 
-        if(!showError()){
+        if(cRegistrationPageController.validateFields()){
            System.out.println("error");
            return;
         }
