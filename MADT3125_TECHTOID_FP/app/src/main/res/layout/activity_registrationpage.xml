@@ -208,7 +208,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/et_custom"
-                android:inputType="text"
+                android:inputType="number"
                 android:padding="15dp"
                 android:textSize="15sp" />
             <TextView
@@ -218,7 +218,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Travel Days"
-                android:visibility="gone"/>
+                android:visibility="visible"/>
             <EditText
                 android:id="@+id/edtxt_bonus2"
                 android:layout_width="match_parent"
@@ -227,10 +227,10 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/et_custom"
-                android:inputType="text"
+                android:inputType="number"
                 android:padding="15dp"
                 android:textSize="15sp"
-                android:visibility="gone"/>
+                android:visibility="visible"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -245,7 +245,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:padding="15dp"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp" />
             <TextView
@@ -349,12 +349,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtvw_vehiclemake"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:text="Car Make"/>
+                android:text="Make"/>
             <Spinner
-                android:id="@+id/spnr_car_make"
+                android:id="@+id/spnr_vehiclemake"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -365,12 +366,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtvw_cartype"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:text="Car Type"/>
+                android:text="Type"/>
             <Spinner
-                android:id="@+id/spnr_car_type"
+                android:id="@+id/spnr_cartype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -384,9 +386,9 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:text="Car_category"/>
+                android:text="Category"/>
             <Spinner
-                android:id="@+id/spnr_car_category"
+                android:id="@+id/spnr_vehiclecategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -402,7 +404,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Plate Number"/>
             <EditText
-                android:id="@+id/plate_Number"
+                android:id="@+id/plate_number"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
@@ -415,12 +417,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/txtvw_cargeartype"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Gear Type"/>
             <Spinner
-                android:id="@+id/spnr_geartype"
+                android:id="@+id/spnr_cargeartype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
