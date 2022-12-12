@@ -13,8 +13,8 @@
     android:layout_height="wrap_content"
     android:iconifiedByDefault="false"
     android:queryHint="Search"
-    android:layout_gravity="center"
     app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
     tools:ignore="MissingConstraints" />
 
      <ListView
@@ -22,24 +22,22 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          app:layout_constraintTop_toBottomOf="@id/simpleSearchView"
-         app:layout_constraintBottom_toTopOf="@+id/idFABadd"
          >
      </ListView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFABadd"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_height="60dp"
         android:src="@drawable/ic_add"
-        app:fabCustomSize="60dp"
+        app:fabCustomSize="50dp"
         app:tint="@color/white"
+        android:backgroundTint="@color/theme3_primary"
         android:layout_gravity="right"
         android:onClick="newOnClick"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/simpleSearchView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

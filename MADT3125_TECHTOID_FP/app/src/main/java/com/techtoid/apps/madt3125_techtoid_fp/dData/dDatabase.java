@@ -67,7 +67,7 @@ public class dDatabase {
         }
     }
     public static class Storage {
-        File
+        //File
         public static void loadDatabase() {
             Users.addUserToList("admin","Administrator","admin");
             Users.addUserToList("880853","Rishi Varma","varma");
