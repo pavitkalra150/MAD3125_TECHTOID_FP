@@ -78,6 +78,9 @@ public class RegistrationPageActivity extends AppCompatActivity {
     }
     public void onRegisterClick(View view){
         vRegistrationPageView.RegisterIsClicked();
+        if(vRegistrationPageView.registrationIsSuccessful){
+            finish();
+        }
     }
     public void genderOnClick(View view) {
         vRegistrationPageView.GenderButtonClicked(view);

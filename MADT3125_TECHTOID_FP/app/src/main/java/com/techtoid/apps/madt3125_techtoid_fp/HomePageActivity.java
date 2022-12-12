@@ -27,8 +27,8 @@ public class HomePageActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         vHomePageView.PageLoaded(HomePageActivity.this);
     }
 }

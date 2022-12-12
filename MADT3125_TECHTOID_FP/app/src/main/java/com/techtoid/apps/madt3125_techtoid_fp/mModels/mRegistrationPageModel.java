@@ -4,6 +4,7 @@ import com.techtoid.apps.madt3125_techtoid_fp.mvc.mPageModel;
 import com.techtoid.apps.madt3125_techtoid_fp.dData.*;
 
 public class mRegistrationPageModel extends mPageModel {
+    public static boolean employeeIsAdded = false;
     public static void addNewEmployeeToDatabase(String firstName, String lastName, String dateOfBirth, String gender, String role, String bonus1, String bonus2,
                                                 String salary, String occupationRate, String vehicle, String make, String category, String color, String plate,
                                                 String extra1, String extra2, String extra3) {
@@ -15,16 +16,19 @@ public class mRegistrationPageModel extends mPageModel {
                     gender,Integer.parseInt(bonus1),Integer.parseInt(bonus2), Double.parseDouble(salary),Double.parseDouble(occupationRate),
                     (vehicle.equals("Car")?(new Car(make, plate, color, category, extra1, extra2)):
                             (vehicle.equals("Motorcycle"))?(new Motorcycle(make, plate, color, category, Boolean.parseBoolean(extra3))):null)));
+            employeeIsAdded = true;
         } else if(role.equals("Programmer")) {
             dDatabase.Employees.addNewEmployeeToEmployeeList(new Programmer(dDatabase.Employees.getIDcount(),(firstName+" "+lastName),Integer.parseInt(year),
                     gender,Integer.parseInt(bonus1), Double.parseDouble(salary),Double.parseDouble(occupationRate),
                     (vehicle.equals("Car")?(new Car(make, plate, color, category, extra1, extra2)):
                             (vehicle.equals("Motorcycle"))?(new Motorcycle(make, plate, color, category, Boolean.parseBoolean(extra3))):null)));
+            employeeIsAdded = true;
         } else if(role.equals("Tester")) {
             dDatabase.Employees.addNewEmployeeToEmployeeList(new Programmer(dDatabase.Employees.getIDcount(),(firstName+" "+lastName),Integer.parseInt(year),
                     gender,Integer.parseInt(bonus1), Double.parseDouble(salary),Double.parseDouble(occupationRate),
                     (vehicle.equals("Car")?(new Car(make, plate, color, category, extra1, extra2)):
                             (vehicle.equals("Motorcycle"))?(new Motorcycle(make, plate, color, category, Boolean.parseBoolean(extra3))):null)));
+            employeeIsAdded = true;
         }
     }
     public static int getEmployeeIDcount() {

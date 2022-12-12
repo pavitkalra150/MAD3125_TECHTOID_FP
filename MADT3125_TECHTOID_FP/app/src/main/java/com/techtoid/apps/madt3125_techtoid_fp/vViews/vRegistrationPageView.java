@@ -1,5 +1,6 @@
 package com.techtoid.apps.madt3125_techtoid_fp.vViews;
 
+import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
@@ -10,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cRegistrationPageController;
+import com.techtoid.apps.madt3125_techtoid_fp.dData.dDatabase;
+
 import org.w3c.dom.Text;
 
 public class vRegistrationPageView {
@@ -40,6 +43,7 @@ public class vRegistrationPageView {
     private static LinearLayout lnr_sidecar;
     private static CheckBox chckbx_sidecar;
 
+    public static boolean registrationIsSuccessful = false;
 
     public static void initUIComponents(
             EditText empID,
@@ -92,7 +96,7 @@ public class vRegistrationPageView {
         spnr_color = color;
         lnr_sidecar = lnrSideCar;
         chckbx_sidecar = cbSideCar;
-        et_empID.setText(cRegistrationPageController.getNewEmployeeID());
+        et_empID.setText(String.valueOf("Employee ID :  " + cRegistrationPageController.getNewEmployeeID()));
         spnr_empType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -152,8 +156,9 @@ public class vRegistrationPageView {
 
         if(!showError()){
            System.out.println("error");
+           return;
         }
-        cRegistrationPageController.registerEmployee(
+        boolean response = cRegistrationPageController.registerEmployee(
                 et_fname.getText().toString(),
                 et_lname.getText().toString(),
                 et_dob.getText().toString(),
@@ -172,6 +177,11 @@ public class vRegistrationPageView {
                 getGearTypeSelected(),
                 getSideCarChecked()
         );
+        if(response) {
+            dDatabase.iIntent._canShow = true;
+            dDatabase.iIntent._success = true;
+            registrationIsSuccessful = true;
+        }
     }
     public static String getVehicleMakeTypeSelected() {
         return "";

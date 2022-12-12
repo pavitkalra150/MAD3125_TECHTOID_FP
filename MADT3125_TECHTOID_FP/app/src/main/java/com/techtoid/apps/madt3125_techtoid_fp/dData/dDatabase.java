@@ -82,4 +82,8 @@ public class dDatabase {
 
         }
     }
+    public static class iIntent {
+        public static boolean _canShow = false;
+        public static boolean _success = false;
+    }
 }
