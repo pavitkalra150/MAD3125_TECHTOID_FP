@@ -78,6 +78,11 @@ public class vRegistrationPageView {
         return true;
     }
 
+    public static void DateOfBirthClicked(View view) {
+
+
+    }
+
     public static void RegisterIsClicked(){
 
         if(!showError()){

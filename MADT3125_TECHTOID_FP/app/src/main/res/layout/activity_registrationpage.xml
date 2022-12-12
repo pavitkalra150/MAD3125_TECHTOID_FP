@@ -296,7 +296,7 @@
                         android:id="@+id/txtvw_btn_car"
                         android:background="@drawable/image_button_left"
                         android:backgroundTint="#DDDDDD"
-                        android:onClick="genderOnClick"
+                        android:onClick="vehicleOnClick"
                         android:alpha="0"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -314,7 +314,7 @@
                         android:id="@+id/txtvw_btn_motorcycle"
                         android:background="@drawable/image_button_right"
                         android:backgroundTint="#DDDDDD"
-                        android:onClick="genderOnClick"
+                        android:onClick="vehicleOnClick"
                         android:alpha="0.75"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -351,6 +351,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Car Make"/>
             <Spinner
                 android:id="@+id/spnr_car_make"
@@ -366,6 +367,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Car Type"/>
             <Spinner
                 android:id="@+id/spnr_car_type"
@@ -381,6 +383,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Car_category"/>
             <Spinner
                 android:id="@+id/spnr_car_category"
@@ -396,6 +399,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Plate Number"/>
             <EditText
                 android:id="@+id/plate_Number"
@@ -413,9 +417,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Gear Type"/>
             <Spinner
-                android:id="@+id/spnr_gear_type"
+                android:id="@+id/spnr_geartype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -428,10 +433,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Color"/>
 
             <Spinner
-                android:id="@+id/color"
+                android:id="@+id/spnr_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -440,6 +446,31 @@
                 android:padding="15dp"
                 android:background="@drawable/et_custom"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lnr_sidecar"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sidecar"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:textAlignment="textStart"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chckbx_sidecar"
+                    android:layout_weight="1"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
@@ -447,6 +478,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="30dp"
+                android:layout_marginTop="60dp"
                 android:textColor="@android:color/white"
                 android:text="register"
                 android:onClick="onRegisterClick"
