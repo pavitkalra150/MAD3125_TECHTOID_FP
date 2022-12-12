@@ -30,7 +30,7 @@ public class mRegistrationPageModel extends mPageModel {
                             (vehicle.equals("Motorcycle"))?(new Motorcycle(make, plate, color, category, Boolean.parseBoolean(extra3))):null)));
             employeeIsAdded = true;
         }
-    }git
+    }
     public static int getEmployeeIDcount() {
         return dDatabase.Employees.getIDcount();
     }
