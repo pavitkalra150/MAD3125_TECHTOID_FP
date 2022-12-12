@@ -63,6 +63,9 @@ public class dDatabase {
             EmployeeList.remove(id-1);
         }
         public static int getIDcount() { return IDcount; }
+        public static void initializeDataInDatabase() {
+//            EmployeeList.add(new Manager(IDcount++,"Rishi Varma",))
+        }
     }
     public static class Storage {
         public static void loadDatabase() {

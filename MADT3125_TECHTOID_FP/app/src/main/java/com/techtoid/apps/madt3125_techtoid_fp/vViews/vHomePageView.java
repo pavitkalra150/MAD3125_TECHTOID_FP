@@ -26,7 +26,6 @@ public class vHomePageView {
 
         // set the numbersViewAdapter for ListView
         uiHomePageEmployeeList.setAdapter(numbersArrayAdapter);
-        git
         if(dDatabase.iIntent._canShow) {
             String message = (dDatabase.iIntent._success)?"Registration is Succesfull":"Failed Registration";
             Toast.makeText(context,message,Toast.LENGTH_LONG).show();
