@@ -68,7 +68,7 @@ public class RegistrationPageActivity extends AppCompatActivity {
                     public void onDateSet(DatePicker datepicker, int selectedYear, int selectedMonth, int selectedDay) {
                         // TODO Auto-generated method stub
                         Log.e("Date Selected", "Month: " + selectedMonth + " Day: " + selectedDay + " Year: " + selectedYear);
-                        DOB.setText(selectedMonth + "/" + selectedDay + "/" + selectedYear);
+                        DOB.setText((selectedMonth + 1)+ "/" + selectedDay + "/" + selectedYear);
                     }
                 },year, month, day);
                 mDatePicker.setTitle("Date of Birth");
