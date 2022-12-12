@@ -22,15 +22,15 @@ public class RegistrationPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registrationpage);
         final TextView DOB = findViewById(R.id.et_birthYear);
 
-        vRegistrationPageView.initUIComponents(
-                findViewById(R.id.et_fname),
-                findViewById(R.id.et_lname),
-                findViewById(R.id.et_salary),
-//                findViewById(R.id.rg_gender),
-                findViewById(R.id.et_occupationrate),
-                findViewById(R.id.car_category),
-                findViewById(R.id.plate_Number),
-                findViewById(R.id.color));
+//        vRegistrationPageView.initUIComponents(
+//                findViewById(R.id.et_fname),
+//                findViewById(R.id.et_lname),
+//                findViewById(R.id.et_salary),
+////                findViewById(R.id.rg_gender),
+//                findViewById(R.id.et_occupationrate),
+//                findViewById(R.id.car_category),
+//                findViewById(R.id.plate_Number),
+//                findViewById(R.id.color));
 
 
         DOB.setOnClickListener(new View.OnClickListener() {

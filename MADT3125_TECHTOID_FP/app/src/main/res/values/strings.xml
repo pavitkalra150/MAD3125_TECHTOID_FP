@@ -12,6 +12,31 @@
         <item>Manager</item>
         <item>Programmer</item>
         <item>Tester</item>
-
+    </string-array>
+    <string-array name="gear_type">
+        <item>Manual</item>
+        <item>Automatic</item>
+    </string-array>
+    <string-array name="car_make">
+        <item>BMW</item>
+        <item>Mercedes</item>
+        <item>Toyota</item>
+        <item>KIA</item>
+        <item>Nissan</item>
+        <item>Honda</item>
+        <item>Chevrolet</item>
+        <item>Audi</item>
+        <item>Ford</item>
+    </string-array>
+    <string-array name="car_category">
+        <item>Sports</item>
+        <item>Family</item>
+    </string-array>
+    <string-array name="car_type">
+        <item>SUV</item>
+        <item>Hatchback</item>
+        <item>Sedan</item>
+        <item>Minivan</item>
+        <item>Sports</item>
     </string-array>
 </resources>
