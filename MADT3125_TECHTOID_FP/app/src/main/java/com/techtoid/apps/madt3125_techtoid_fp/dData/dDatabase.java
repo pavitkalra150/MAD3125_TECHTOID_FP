@@ -45,7 +45,7 @@ public class dDatabase {
             IDcount++;
             EmployeeList.add(employee);
         }
-        public static ArrayList<Employee> getEmployeeList() {
+        public static ArrayList<Employee> getEmployeeListFromDatabase() {
             return EmployeeList;
         }
         public static Employee getEmployeeDataFromEmployeeList(int id) {
