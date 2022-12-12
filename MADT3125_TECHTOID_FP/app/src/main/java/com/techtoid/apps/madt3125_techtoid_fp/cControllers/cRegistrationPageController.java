@@ -30,10 +30,10 @@ public class cRegistrationPageController extends cPageController {
             vRegistrationPageView.et_lname.setError("You should enter Last Name");
             errors = true;
         }
-        if(vRegistrationPageView.et_dob.getText().toString().isEmpty()){
-            vRegistrationPageView.et_dob.setError("you sholud select date of birth");
-            errors = true;
-        }
+//        if(vRegistrationPageView.et_dob.getText().toString().isEmpty()){
+//            vRegistrationPageView.et_dob.setError("you sholud select date of birth");
+//            errors = true;
+//        }
         if(!vRegistrationPageView.et_lname.getText().toString().matches("[a-zA-Z]*")){
             vRegistrationPageView.et_lname.setError("You should enter proper last name");
             errors = true;
@@ -53,14 +53,23 @@ public class cRegistrationPageController extends cPageController {
                 errors = true;
             }
         }
+        switch (vRegistrationPageView.spnr_empType.getSelectedItemPosition()){
+            case 0:
+                if(vRegistrationPageView.et_bonus2.getText().toString().isEmpty()){
+                    vRegistrationPageView.et_bonus2.setError("You should enter no of days travelled");
+                    errors = true;
+                }
+            case 1:
+                if(!vRegistrationPageView.et_bonus2.getText().toString().isEmpty()){}
+            case 2:
+                if(!vRegistrationPageView.et_bonus2.getText().toString().isEmpty()){
+                }
+        }
         if(vRegistrationPageView.et_bonus1.getText().toString().isEmpty()){
             vRegistrationPageView.et_bonus1.setError("You should fill the above field");
             errors = true;
         }
-        if(vRegistrationPageView.et_bonus2.getText().toString().isEmpty()){
-            vRegistrationPageView.et_bonus2.setError("You should enter no of days travelled");
-            errors = true;
-        }
+
         if(vRegistrationPageView.et_plateNumber.getText().toString().isEmpty()){
             vRegistrationPageView.et_plateNumber.setError("You should enter plate number");
             errors = true;
