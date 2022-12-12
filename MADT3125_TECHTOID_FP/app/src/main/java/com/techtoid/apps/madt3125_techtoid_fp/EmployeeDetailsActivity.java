@@ -12,6 +12,7 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employeedetails);
         vEmployeeDetailsView.setActivityContext(EmployeeDetailsActivity.this);
+        vEmployeeDetailsView.tv_name = findViewById(R.id.name);
         vEmployeeDetailsView.PageIsCreated(getIntent().getIntExtra("ID",0));
     }
 }

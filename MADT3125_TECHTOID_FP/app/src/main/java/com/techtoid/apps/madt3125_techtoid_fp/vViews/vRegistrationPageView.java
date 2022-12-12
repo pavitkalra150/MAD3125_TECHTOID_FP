@@ -236,7 +236,7 @@ public class vRegistrationPageView {
     public static String getSelectedGender() {
         if(tv_male.getAlpha() == (float)0) {
             return "Male";
-        } else if(tv_female.getAlpha() == (float)0.75) {
+        } else if(tv_female.getAlpha() == (float)0) {
             return "Female";
         }
         return "";

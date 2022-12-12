@@ -24,13 +24,13 @@ public class mRegistrationPageModel extends mPageModel {
                             (vehicle.equals("Motorcycle"))?(new Motorcycle(make, plate, color, category, Boolean.parseBoolean(extra3))):null)));
             employeeIsAdded = true;
         } else if(role.equals("Tester")) {
-            dDatabase.Employees.addNewEmployeeToEmployeeList(new Programmer(dDatabase.Employees.getIDcount(),(firstName+" "+lastName),Integer.parseInt(year),
+            dDatabase.Employees.addNewEmployeeToEmployeeList(new Tester(dDatabase.Employees.getIDcount(),(firstName+" "+lastName),Integer.parseInt(year),
                     gender,Integer.parseInt(bonus1), Double.parseDouble(salary),Double.parseDouble(occupationRate),
                     (vehicle.equals("Car")?(new Car(make, plate, color, category, extra1, extra2)):
                             (vehicle.equals("Motorcycle"))?(new Motorcycle(make, plate, color, category, Boolean.parseBoolean(extra3))):null)));
             employeeIsAdded = true;
         }
-    }
+    }git
     public static int getEmployeeIDcount() {
         return dDatabase.Employees.getIDcount();
     }

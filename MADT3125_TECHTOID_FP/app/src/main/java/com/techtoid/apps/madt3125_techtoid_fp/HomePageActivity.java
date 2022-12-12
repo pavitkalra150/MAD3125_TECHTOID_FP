@@ -22,10 +22,11 @@ public class HomePageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        ListView listView = findViewById(R.id.listView);
         vHomePageView.setActivityContext(HomePageActivity.this);
         vHomePageView.initUIcomponents(findViewById(R.id.idFABadd), findViewById(R.id.listView));
         dDatabase.Employees.initializeDataInDatabase();
-        vHomePageView.getUiHomePageEmployeeList().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(HomePageActivity.this, "Item Clicked", Toast.LENGTH_SHORT).show();
