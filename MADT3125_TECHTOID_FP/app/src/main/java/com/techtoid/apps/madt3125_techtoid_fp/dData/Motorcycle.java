@@ -10,7 +10,6 @@ public class Motorcycle extends Vehicle {
         return this._HasSideCar;
     }
     public String toString() {
-        return "Employee has a motorcycle. \n " + super.toString() +
-                "+\n\t- " + (hasSidecar() ? "with" : "without") + " sidecar";
+        return super.toString() + (hasSidecar() ? "with" : "without") + "#" + "null" + "#";
     }
 }

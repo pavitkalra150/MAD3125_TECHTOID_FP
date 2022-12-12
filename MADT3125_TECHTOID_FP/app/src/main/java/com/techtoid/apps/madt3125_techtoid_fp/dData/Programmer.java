@@ -16,7 +16,7 @@ public class Programmer extends Employee {
         return baseAnnualIncome + projectBonus;
     }
     public String toString() {
-        return super.toString() + " and completed " + getProjects() + " projects.\nHis/Her estimated annual income is $" + getAnnualIncome();
+        return super.toString() + getProjects() + "#" + "null" + "#" + getAnnualIncome() + "&";
     }
 
 }

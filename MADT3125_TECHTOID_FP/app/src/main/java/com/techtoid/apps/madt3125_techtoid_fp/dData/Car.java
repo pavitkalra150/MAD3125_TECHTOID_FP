@@ -15,6 +15,6 @@ public class Car extends Vehicle {
         return this._Type;
     }
     public String toString() {
-        return "Employee has a car. \n " + super.toString() + "\n\t- Gear: " + getGear() + " \n\t- type: " + getType();
+        return super.toString() + getGear() + "#" + getType() + "#";
     }
 }

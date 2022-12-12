@@ -48,10 +48,10 @@ public class dDatabase {
         public static ArrayList<Employee> getEmployeeListFromDatabase() {
             return EmployeeList;
         }
-        public static Employee getEmployeeDataFromEmployeeList(int id) {
+        public static String getEmployeeDataFromEmployeeList(int id) {
             for(Employee employee : EmployeeList) {
                 if(employee.getID() == id) {
-                    return employee;
+                    return employee.toString();
                 }
             }
             return null;
@@ -64,10 +64,17 @@ public class dDatabase {
         }
         public static int getIDcount() { return IDcount; }
         public static void initializeDataInDatabase() {
+            addNewEmployeeToEmployeeList(new Manager(dDatabase.Employees.getIDcount(),"Rishi Varma",1998,
+                    "Male",58,68, 8000,80,
+                    (new Car("BMW", "aaa111", "red", "family", "manual", "sedan"))));
         }
     }
     public static class Storage {
+<<<<<<< Updated upstream
         //File
+=======
+//        File
+>>>>>>> Stashed changes
         public static void loadDatabase() {
             Users.addUserToList("admin","Administrator","admin");
             Users.addUserToList("880853","Rishi Varma","varma");

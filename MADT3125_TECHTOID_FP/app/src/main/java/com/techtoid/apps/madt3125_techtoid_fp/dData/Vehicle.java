@@ -24,7 +24,7 @@ public abstract class Vehicle {
         return this._Category;
     }
     public String toString() {
-        return "\t- make: " + getMake() + " \n\t- plate: " + getPlate() + " \n\t- color: " + getColor() + " \n\t- category: " + getCategory();
+        return getMake() + "#" + getPlate() + "#" + getColor() + "#" + getCategory() + "#";
     }
 
 }

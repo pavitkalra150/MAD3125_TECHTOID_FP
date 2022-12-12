@@ -22,7 +22,7 @@ public class Manager extends Employee {
         return baseAnnualIncome + projectBonus + travelBonus;
     }
     public String toString() {
-        return super.toString() + "He/She travelled " + getTravelDays() + " days and has brought " + getNewClients() + " new clients.\nHis/Her estimated annual income is $" + getAnnualIncome();
+        return super.toString() + getTravelDays() + "#" + getNewClients() + "#" + getAnnualIncome() + "&";
     }
 
 }
