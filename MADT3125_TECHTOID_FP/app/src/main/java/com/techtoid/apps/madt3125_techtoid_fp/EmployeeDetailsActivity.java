@@ -20,11 +20,17 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
                 findViewById(R.id.ename),
                 findViewById(R.id.DOB),
                 findViewById(R.id.Emp_type),
+                findViewById(R.id.bonus1_lbl),
+                findViewById(R.id.bonus1_txt),
+                findViewById(R.id.bonus2_lbl),
+                findViewById(R.id.bonus2_txt),
                 findViewById(R.id.salary),
                 findViewById(R.id.occRate),
-                findViewById(R.id.vehicle_type),
+                findViewById(R.id.sidecar_lbl),
+                findViewById(R.id.sidecr_txt),
                 findViewById(R.id.category),
                 findViewById(R.id.model),
+                findViewById(R.id.plate),
                 findViewById(R.id.vehicle_color)
         );
         vEmployeeDetailsView.PageIsCreated(getIntent().getIntExtra("ID",0));

@@ -237,7 +237,8 @@
                 >
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_height="wrap_content" android:layout_width="match_parent">
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -339,15 +340,22 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_marginBottom="40dp"
-                    android:gravity="center"
-                    >
+                    android:layout_width="wrap_content"
+                    android:padding="20dp">
+                    <Button
+                        android:id="@+id/update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update"
+                        android:layout_marginStart="50dp"
+                        android:backgroundTint="@color/theme2_primary"
+                        />
                     <Button
                         android:id="@+id/delete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Delete"
+                        android:layout_marginStart="50dp"
                         android:backgroundTint="#FF0000"
                         />
                 </LinearLayout>

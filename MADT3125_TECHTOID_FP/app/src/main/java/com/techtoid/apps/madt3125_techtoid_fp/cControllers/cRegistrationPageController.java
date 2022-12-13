@@ -34,10 +34,6 @@ public class cRegistrationPageController extends cPageController {
             vRegistrationPageView.et_lname.setError("You should enter proper last name");
             errors = true;
         }
-        if(vRegistrationPageView.et_dob.getText().toString().isEmpty()){
-            vRegistrationPageView.et_dob.setError("you sholud select date of birth");
-            errors = true;
-        }
         if(vRegistrationPageView.et_salary.getText().toString().isEmpty()){
             vRegistrationPageView.et_salary.setError("You should enter salary");
             errors = true;
