@@ -3,7 +3,7 @@ package com.techtoid.apps.madt3125_techtoid_fp.dData;
 public class Motorcycle extends Vehicle {
     private boolean _HasSideCar;
     public Motorcycle(String make, String plate, String color, String category, boolean hasSidecar) {
-        super(make, plate, color, category);
+        super("Motorcycle", make, plate, color, category);
         this._HasSideCar = hasSidecar;
     }
     public boolean hasSidecar() {

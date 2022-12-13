@@ -49,12 +49,7 @@ public class dDatabase {
             return EmployeeList;
         }
         public static String getEmployeeDataFromEmployeeList(int id) {
-            for(Employee employee : EmployeeList) {
-                if(employee.getID() == id) {
-                    return employee.toString();
-                }
-            }
-            return null;
+            return EmployeeList.get(id).toString();
         }
         public static void updateEmployeeDetailsInEmployeeList(Employee employee) {
             EmployeeList.set((employee.getID()-1),employee);
@@ -64,9 +59,10 @@ public class dDatabase {
         }
         public static int getIDcount() { return IDcount; }
         public static void initializeDataInDatabase() {
-            addNewEmployeeToEmployeeList(new Manager(dDatabase.Employees.getIDcount(),"Rishi Varma",1998,
-                    "Male",58,68, 8000,80,
-                    (new Car("BMW", "aaa111", "red", "family", "manual", "sedan"))));
+            addNewEmployeeToEmployeeList(new Manager(getIDcount(),"Rishi Varma",1998, "Male",58,68,
+                    8000,80, (new Car("BMW", "aaa111", "Red", "Family", "Manual", "Sedan"))));
+            addNewEmployeeToEmployeeList(new Programmer(getIDcount(), "Simran Mehra", 1999, "Female", 56, 12000,
+                    90, (new Car("KIA", "aadd54", "Black", "Sport", "Automatic", "Sports"))));
         }
     }
     public static class Storage {

@@ -10,6 +10,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.techtoid.apps.madt3125_techtoid_fp.R;
 import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cRegistrationPageController;
 import com.techtoid.apps.madt3125_techtoid_fp.dData.dDatabase;
 
@@ -43,6 +45,14 @@ public class vRegistrationPageView {
     public static LinearLayout lnr_sidecar;
     public static CheckBox chckbx_sidecar;
 
+    public static String[] arr_colors;
+    public static String[] arr_vehicle_make;
+    public static String[] arr_car_type;
+    public static String[] arr_emp_type;
+    public static String[] arr_gear_type;
+    public static String[] arr_vehicle_category;
+
+
     public static boolean registrationIsSuccessful = false;
 
     public static void initUIComponents(
@@ -70,7 +80,13 @@ public class vRegistrationPageView {
             Spinner spnrGearType,
             Spinner color,
             LinearLayout lnrSideCar,
-            CheckBox cbSideCar){
+            CheckBox cbSideCar,
+            String[] sacolors,
+            String[] saemptype,
+            String[] sageartype,
+            String[] savehiclemake,
+            String[] savehiclecategory,
+            String[] sacartype){
         et_empID = empID;
         et_fname = firstName;
         et_lname = lastName;
@@ -96,7 +112,13 @@ public class vRegistrationPageView {
         spnr_color = color;
         lnr_sidecar = lnrSideCar;
         chckbx_sidecar = cbSideCar;
-        et_empID.setText(String.valueOf("Employee ID :  " + cRegistrationPageController.getNewEmployeeID()));
+        arr_colors = sacolors;
+        arr_emp_type = saemptype;
+        arr_gear_type = sageartype;
+        arr_vehicle_make = savehiclemake;
+        arr_vehicle_category = savehiclecategory;
+        arr_car_type = sacartype;
+        et_empID.setText(String.valueOf("Employee ID :  EMP" + String.format("%03d",cRegistrationPageController.getNewEmployeeID())));
         spnr_empType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -184,22 +206,22 @@ public class vRegistrationPageView {
         }
     }
     public static String getVehicleMakeTypeSelected() {
-        return "";
+        return arr_vehicle_make[spnr_vehicle_make.getSelectedItemPosition()];
     }
     public static String getCarTypeSelected() {
-        return "";
+        return arr_car_type[spnr_carType.getSelectedItemPosition()];
     }
     public static String getCategorySelected() {
-        return "";
+        return arr_vehicle_category[spnr_category.getSelectedItemPosition()];
     }
     public static String getGearTypeSelected() {
-        return "";
+        return arr_gear_type[spnr_gearType.getSelectedItemPosition()];
     }
     public static String getColorSelected() {
-        return "";
+        return arr_colors[spnr_color.getSelectedItemPosition()];
     }
     public static String getSideCarChecked() {
-        return "";
+        return (chckbx_sidecar.isChecked())?"true":"false";
     }
     public static void EmployeeTypeItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         if(i == 0) {

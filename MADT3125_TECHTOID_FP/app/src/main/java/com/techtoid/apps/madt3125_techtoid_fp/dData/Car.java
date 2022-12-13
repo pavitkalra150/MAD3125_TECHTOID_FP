@@ -4,7 +4,7 @@ public class Car extends Vehicle {
     private String _Gear;
     private String _Type;
     public Car(String make, String plate, String color, String category, String gear, String type) {
-        super(make, plate, color, category);
+        super("Car", make, plate, color, category);
         this._Gear = gear;
         this._Type = type;
     }

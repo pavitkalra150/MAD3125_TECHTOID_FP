@@ -11,6 +11,7 @@ public class mRegistrationPageModel extends mPageModel {
 //        Vehicle _vehicle = new ;
 //        Employee _employee;
         String year = getYear(dateOfBirth);
+
         if(role.equals("Manager")) {
             dDatabase.Employees.addNewEmployeeToEmployeeList(new Manager(dDatabase.Employees.getIDcount(),(firstName+" "+lastName),Integer.parseInt(year),
                     gender,Integer.parseInt(bonus1),Integer.parseInt(bonus2), Double.parseDouble(salary),Double.parseDouble(occupationRate),

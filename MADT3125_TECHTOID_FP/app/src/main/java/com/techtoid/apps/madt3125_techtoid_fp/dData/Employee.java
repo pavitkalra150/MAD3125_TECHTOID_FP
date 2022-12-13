@@ -106,10 +106,10 @@ public abstract class Employee {
         System.out.println("We have a new Employee: " + getName() + ", a " + getRole());
     }
     public String toString() {
-        String desc = "$" + getName() + "#" + getRole() + "#" + getAge() + "#";
+        String desc = getID() + "#" + getName() + "#" + getRole() + "#" + getGender() + "#" + getAge() + "#";
         Vehicle vehicle = getVehicle();
         if (vehicle != null) {
-            desc += vehicle + "#";
+            desc += vehicle;
         }
         desc += getOccupationRate() + "#";
         return desc;

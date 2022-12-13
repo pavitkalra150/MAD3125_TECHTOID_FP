@@ -16,7 +16,7 @@ public class Tester extends Employee {
         return baseAnnualIncome + projectBonus;
     }
     public String toString() {
-        return super.toString() + getBugs() + "#" + "null" + "#" + getAnnualIncome() + "&";
+        return super.toString() + getBugs() + "#" + "null" + "#" + getAnnualIncome();
     }
 
 }

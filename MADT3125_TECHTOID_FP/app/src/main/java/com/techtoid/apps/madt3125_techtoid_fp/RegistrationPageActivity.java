@@ -50,7 +50,13 @@ public class RegistrationPageActivity extends AppCompatActivity {
                 findViewById(R.id.spnr_cargeartype),
                 findViewById(R.id.spnr_color),
                 findViewById(R.id.lnr_sidecar),
-                findViewById(R.id.chckbx_sidecar));
+                findViewById(R.id.chckbx_sidecar),
+                getResources().getStringArray(R.array.colors),
+                getResources().getStringArray(R.array.emp_type),
+                getResources().getStringArray(R.array.gear_type),
+                getResources().getStringArray(R.array.car_make),
+                getResources().getStringArray(R.array.car_category),
+                getResources().getStringArray(R.array.car_type));
 
 
         DOB.setOnClickListener(new View.OnClickListener() {

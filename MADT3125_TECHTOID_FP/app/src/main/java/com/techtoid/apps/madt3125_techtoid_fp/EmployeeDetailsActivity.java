@@ -12,7 +12,18 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employeedetails);
         vEmployeeDetailsView.setActivityContext(EmployeeDetailsActivity.this);
-        vEmployeeDetailsView.tv_name = findViewById(R.id.ename);
+        vEmployeeDetailsView.initUIComponents(
+                findViewById(R.id.display),
+                findViewById(R.id.ename),
+                findViewById(R.id.DOB),
+                findViewById(R.id.Emp_type),
+                findViewById(R.id.salary),
+                findViewById(R.id.occRate),
+                findViewById(R.id.vehicle_type),
+                findViewById(R.id.category),
+                findViewById(R.id.model),
+                findViewById(R.id.vehicle_color)
+        );
         vEmployeeDetailsView.PageIsCreated(getIntent().getIntExtra("ID",0));
     }
 }
