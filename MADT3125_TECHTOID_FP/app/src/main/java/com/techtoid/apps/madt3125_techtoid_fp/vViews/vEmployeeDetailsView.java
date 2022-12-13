@@ -1,9 +1,12 @@
 package com.techtoid.apps.madt3125_techtoid_fp.vViews;
 
 import android.content.Context;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.techtoid.apps.madt3125_techtoid_fp.EmployeeDetailsActivity;
 import com.techtoid.apps.madt3125_techtoid_fp.R;
 import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cEmployeeDetailsController;
 import com.techtoid.apps.madt3125_techtoid_fp.dData.Employee;
@@ -67,4 +70,6 @@ public class vEmployeeDetailsView {
         uiVehiclePlateLabel.setText(employee.plateNumber);
         uiVehicleColorLabel.setText(employee.color);
     }
+
+
 }

@@ -48,14 +48,26 @@ public class dDatabase {
         public static ArrayList<Employee> getEmployeeListFromDatabase() {
             return EmployeeList;
         }
+        private static int getEmployeeIndex(int id){
+            for (int i = 0; i < EmployeeList.size(); i++) {
+                Employee emp = EmployeeList.get(i);
+                if(emp.getID() == id) return  i;
+            }
+            return -1;
+        }
         public static String getEmployeeDataFromEmployeeList(int id) {
-            return EmployeeList.get(id).toString();
+            int empIndex = getEmployeeIndex(id);
+            if(empIndex>-1)
+                return EmployeeList.get(empIndex).toString();
+            return null;
         }
         public static void updateEmployeeDetailsInEmployeeList(Employee employee) {
             EmployeeList.set((employee.getID()-1),employee);
         }
         public static void deleteEmployeeFromEmployeeList(int id) {
-            EmployeeList.remove(id-1);
+            int empIndex = getEmployeeIndex(id);
+            if(empIndex>-1)
+                EmployeeList.remove(empIndex);
         }
         public static int getIDcount() { return IDcount; }
         public static void initializeDataInDatabase() {

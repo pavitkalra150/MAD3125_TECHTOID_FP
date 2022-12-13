@@ -21,6 +21,7 @@ public class HomePageActivity extends AppCompatActivity {
 
 
     private SearchView search;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,13 +30,14 @@ public class HomePageActivity extends AppCompatActivity {
         vHomePageView.setActivityContext(HomePageActivity.this);
         vHomePageView.initUIcomponents(findViewById(R.id.idFABadd), findViewById(R.id.listView));
         dDatabase.Employees.initializeDataInDatabase();
-        search =findViewById(R.id.simpleSearchView);
+        search = findViewById(R.id.simpleSearchView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(HomePageActivity.this, "Item Clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(HomePageActivity.this, EmployeeDetailsActivity.class);
-                intent.putExtra("ID",i);
+                mListItem item = (mListItem) adapterView.getAdapter().getItem(i);
+                intent.putExtra("ID", item.getmEmpId());
                 startActivity(intent);
             }
         });
@@ -55,6 +57,7 @@ public class HomePageActivity extends AppCompatActivity {
         });
 
     }
+
     public void newOnClick(View v) {
         startActivity(new Intent(HomePageActivity.this, RegistrationPageActivity.class));
     }
@@ -62,6 +65,9 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if(search!=null) {
+            search.setIconified(true);
+        }
         vHomePageView.PageLoaded();
     }
 }

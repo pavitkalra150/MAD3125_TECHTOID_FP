@@ -43,4 +43,8 @@ public class mEmployeeDetailsModel {
         empData.extra2 = data[extra2];
         return empData;
     }
+
+    public static void deleteEmployeeFromDatabase(int id){
+        dDatabase.Employees.deleteEmployeeFromEmployeeList(id);
+    }
 }

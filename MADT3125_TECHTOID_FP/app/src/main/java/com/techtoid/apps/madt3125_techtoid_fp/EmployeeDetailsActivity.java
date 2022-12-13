@@ -3,6 +3,9 @@ package com.techtoid.apps.madt3125_techtoid_fp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+
+import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cEmployeeDetailsController;
 import com.techtoid.apps.madt3125_techtoid_fp.vViews.vEmployeeDetailsView;
 
 public class EmployeeDetailsActivity extends AppCompatActivity {
@@ -25,5 +28,16 @@ public class EmployeeDetailsActivity extends AppCompatActivity {
                 findViewById(R.id.vehicle_color)
         );
         vEmployeeDetailsView.PageIsCreated(getIntent().getIntExtra("ID",0));
+
+        findViewById(R.id.delete).setOnClickListener(this::onClick);
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.delete:
+                cEmployeeDetailsController.deleteEmployee(getIntent().getIntExtra("ID",0));
+                finish();
+                break;
+        }
     }
 }
