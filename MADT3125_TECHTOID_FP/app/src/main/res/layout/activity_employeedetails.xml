@@ -245,53 +245,24 @@
                         android:layout_marginLeft="10dp"
                         android:hint="Plate"
                         />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/third"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardMaxElevation="12dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                app:layout_constraintTop_toBottomOf="@+id/vehicleDetails"
-                >
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content">
                     <TextView
-                        android:id="@+id/a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:hint="type"
-                        />
-                    <TextView
-                        android:id="@+id/b"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
-                        android:hint="Model"
-                        android:layout_marginLeft="10dp"
-                        />
+                        android:textStyle="bold"
+                        android:text="Vehicle Color"/>
                     <TextView
-                        android:id="@+id/c"
+                        android:id="@+id/vehicle_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_marginLeft="10dp"
-                        android:hint="Plate"
-                        />
+                        android:hint="color"/>
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
