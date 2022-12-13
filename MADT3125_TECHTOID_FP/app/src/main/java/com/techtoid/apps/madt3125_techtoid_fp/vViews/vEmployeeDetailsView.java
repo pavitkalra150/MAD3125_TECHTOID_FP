@@ -1,6 +1,7 @@
 package com.techtoid.apps.madt3125_techtoid_fp.vViews;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,11 +17,15 @@ public class vEmployeeDetailsView {
     public static TextView uiAgeLabel;
     public static TextView uiEmpIdLabel;
     public static TextView uiEmpTypeLabel;
-    public static TextView uiBonus1Label;
-    public static TextView uiBonus2Label;
+    public static TextView uiBonus1Lbl;
+    public static TextView uiBonus1txt;
+    public static TextView uiBonus2Lbl;
+    public static TextView uiBonus2txt;
     public static TextView uiSalaryLabel;
     public static TextView uiOccupationRateLabel;
     public static ImageView uiVehicleImage;
+    public static TextView uiSidecarLabel;
+    public static TextView uiSidecarText;
     public static TextView uiVehicleMakeLabel;
     public static TextView uiVehiclePlateLabel;
     public static TextView uiVehicleColorLabel;
@@ -35,10 +40,16 @@ public class vEmployeeDetailsView {
             TextView name,
             TextView age,
             TextView empType,
+            TextView bonus1lbl,
+            TextView uiBonus1,
+            TextView bonus2lbl,
+            TextView uiBonus2,
             TextView salary,
             TextView occupationRate,
-            TextView vehicleType,
-            TextView make,
+            TextView sidecarlbl,
+            TextView sidecartxt,
+            TextView category,
+            TextView model,
             TextView plate,
             TextView color
             ) {
@@ -46,10 +57,16 @@ public class vEmployeeDetailsView {
         uiNameLabel = name;
         uiAgeLabel = age;
         uiEmpTypeLabel = empType;
+        uiBonus1Lbl = bonus1lbl;
+        uiBonus1txt = uiBonus1;
+        uiBonus2Lbl = bonus2lbl;
+        uiBonus2txt = uiBonus2;
         uiSalaryLabel = salary;
         uiOccupationRateLabel = occupationRate;
-        uiVehicleCategoryLabel = vehicleType;
-        uiVehicleMakeLabel = make;
+        uiVehicleCategoryLabel = category;
+        uiSidecarLabel = sidecarlbl;
+        uiSidecarText = sidecartxt;
+        uiVehicleMakeLabel = model;
         uiVehiclePlateLabel = plate;
         uiVehicleColorLabel = color;
     }
@@ -60,6 +77,31 @@ public class vEmployeeDetailsView {
         uiNameLabel.setText(employee.fullname);
         uiAgeLabel.setText(employee.age);
         uiEmpTypeLabel.setText(employee.empType);
+        if (employee.empType.equals("Manager")) {
+            uiBonus1txt.setText(employee.bonus2);
+            uiBonus2txt.setText(employee.bonus1);
+        }
+        if(employee.empType.equals("Programmer")) {
+            uiBonus1Lbl.setText("Projects");
+            uiBonus1txt.setText(employee.bonus1);
+            uiBonus2Lbl.setVisibility(View.GONE);
+            uiBonus2txt.setVisibility(View.GONE);
+        }
+        if(employee.empType.equals("Tester")) {
+            uiBonus1Lbl.setText("Bugs");
+            uiBonus1txt.setText(employee.bonus1);
+            uiBonus2Lbl.setVisibility(View.GONE);
+            uiBonus2txt.setVisibility(View.GONE);
+        }
+        if(employee.vehicle.equals("Car")){
+            uiSidecarLabel.setVisibility(View.GONE);
+            uiSidecarText.setVisibility(View.GONE);
+        }
+        if(employee.vehicle.equals("Motorcycle")){
+            uiSidecarLabel.setText("Side Car");
+            String res = ((employee.extra1.equals("with"))?"has":((employee.extra1.equals("without"))?"doesn't have":null));
+            uiSidecarText.setText("It "+ res + " a Side Car");
+        }
         uiSalaryLabel.setText(employee.salary);
         uiOccupationRateLabel.setText(employee.occupationrate);
         uiVehicleCategoryLabel.setText(employee.category);

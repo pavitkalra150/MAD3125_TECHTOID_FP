@@ -155,16 +155,18 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content">
+
                     <TextView
+                        android:id="@+id/bonus1_lbl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
-                        android:textStyle="bold"
-                        android:text="Clients"/>
+                        android:layout_marginRight="20dp"
+                        android:text="Clients"
+                        android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/clients"
+                        android:id="@+id/bonus1_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -172,15 +174,16 @@
                         android:hint="type"
                         />
                     <TextView
+                        android:id="@+id/bonus2_lbl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
-                        android:text="Travel Dats"/>
+                        android:text="Travel Days"/>
                     <TextView
-                        android:id="@+id/travel_days"
+                        android:id="@+id/bonus2_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
@@ -239,23 +242,24 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content">
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="20dp"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:text="Vehicle Type"/>-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/vehicle_type"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:hint="type"-->
+<!--                        />-->
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"
-                        android:text="Vehicle Type"/>
-                    <TextView
-                        android:id="@+id/vehicle_type"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="10dp"
-                        android:hint="type"
-                        />
-                    <TextView
+                        android:id="@+id/sidecar_lbl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -264,7 +268,7 @@
                         android:textStyle="bold"
                         android:text="Side Car"/>
                     <TextView
-                        android:id="@+id/sidecr"
+                        android:id="@+id/sidecr_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
