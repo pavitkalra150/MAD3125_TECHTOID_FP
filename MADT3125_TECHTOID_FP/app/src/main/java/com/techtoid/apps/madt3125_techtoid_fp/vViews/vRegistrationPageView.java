@@ -293,7 +293,7 @@ public class vRegistrationPageView {
         if(tv_car.getAlpha() == (float)0) {
             return "Car";
         } else if(tv_motorcycle.getAlpha() == (float)0) {
-            return "Motorycyle";
+            return "Motorcycle";
         }
         return "";
     }
