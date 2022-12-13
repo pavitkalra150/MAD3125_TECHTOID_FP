@@ -262,7 +262,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
-                        android:text="Model"/>
+                        android:text="Category"/>
                     <TextView
                         android:id="@+id/category"
                         android:layout_width="wrap_content"
@@ -278,9 +278,25 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
-                        android:text="Plate Number"/>
+                        android:text="Category"/>
                     <TextView
                         android:id="@+id/model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="Model"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:text="Plate Number"/>
+                    <TextView
+                        android:id="@+id/plate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
