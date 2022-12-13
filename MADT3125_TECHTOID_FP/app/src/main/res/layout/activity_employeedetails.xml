@@ -262,13 +262,30 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
+                        android:text="Side Car"/>
+                    <TextView
+                        android:id="@+id/sidecr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:hint="Side Car"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
                         android:text="Category"/>
                     <TextView
                         android:id="@+id/category"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:hint="Model"
+                        android:hint="category"
                         android:layout_marginLeft="10dp"
                         />
                     <TextView
@@ -278,7 +295,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
-                        android:text="Category"/>
+                        android:text="Model"/>
                     <TextView
                         android:id="@+id/model"
                         android:layout_width="wrap_content"
