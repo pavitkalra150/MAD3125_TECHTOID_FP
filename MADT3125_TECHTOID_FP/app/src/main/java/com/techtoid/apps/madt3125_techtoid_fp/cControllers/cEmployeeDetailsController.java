@@ -8,4 +8,7 @@ public class cEmployeeDetailsController {
     public static EmployeeData getEmployeeDetails(int index) {
         return mEmployeeDetailsModel.getEmployeeFromDatabase(index);
     }
+    public static void deleteEmployee(int index) {
+        mEmployeeDetailsModel.deleteEmployeeFromDatabase(index);
+    }
 }

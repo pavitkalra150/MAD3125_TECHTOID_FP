@@ -14,7 +14,7 @@ public class cHomePageController {
              int imageRes;
              imageRes = R.drawable.male;
              if(emp.getGender().equals("Female")) imageRes = R.drawable.female;
-             homePageList.add(new mListItem(imageRes,emp.getName(),emp.getRole()));
+             homePageList.add(new mListItem(imageRes,emp.getName(),emp.getRole(), emp.getID()));
          }
          return homePageList;
     }

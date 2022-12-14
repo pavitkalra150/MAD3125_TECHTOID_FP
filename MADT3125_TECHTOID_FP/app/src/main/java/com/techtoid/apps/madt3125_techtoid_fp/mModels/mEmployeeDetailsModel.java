@@ -43,6 +43,7 @@ public class mEmployeeDetailsModel {
         empData.extra2 = data[extra2];
         return empData;
     }
+<<<<<<< HEAD
     public static EmployeeData getEmployeeDataObject(int index) {
         final int fullname = 0;
         final int age = 1;
