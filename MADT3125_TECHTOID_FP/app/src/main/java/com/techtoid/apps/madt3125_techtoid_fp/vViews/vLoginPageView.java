@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.text.InputType;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ import com.techtoid.apps.madt3125_techtoid_fp.cControllers.cLoginPageController;
 
 public class vLoginPageView extends vPageView {
     private static Context _context;
-    private static final long LoadingTime = TIME_SHORT;
+    private static final long LoadingTime = TIME_XSHORT;
     private static TextView uiHeadingLabel, uiBack2UsernameLabel;
     private static EditText uiLoginInput;
     private static ProgressBar uiLoginProgressBar;
@@ -31,6 +32,7 @@ public class vLoginPageView extends vPageView {
     private static State LoginState = State.USERNAME;
     public static boolean userIsAuthenticated = false;
     public static String username;
+    public static String firstname;
     public static void setActivityContext(Context context) { _context = context; }
     public static void initUIComponents(TextView textviewHeading, TextView textviewBack2Username, EditText editextLoginInput, ImageButton imagebuttonNext, ProgressBar progressbarLogin) {
         uiHeadingLabel = textviewHeading;
@@ -56,8 +58,9 @@ public class vLoginPageView extends vPageView {
             uiLoginProgressBar.setVisibility(View.VISIBLE);
             (new Handler()).postDelayed(()->{
                 uiLoginProgressBar.setVisibility(View.INVISIBLE);
+                firstname = cLoginPageController.getUserFirstName();
                 username = cLoginPageController.getUserFullName();
-                setUItoPassword(username);
+                setUItoPassword(firstname);
             },LoadingTime);
             LoginState = State.PASSWORD;
         } else if(LoginState == State.PASSWORD) {
@@ -79,7 +82,7 @@ public class vLoginPageView extends vPageView {
         (new Handler()).postDelayed(()->{
             uiLoginProgressBar.setVisibility(View.INVISIBLE);
             setUItoUsername();
-        },TIME_XSHORT);
+        },LoadingTime);
     }
     public static void startHomePageActivity(Class<?> targetActivity) {
         (new Handler()).postDelayed(()->{
@@ -87,10 +90,11 @@ public class vLoginPageView extends vPageView {
             uiLoginInput.setVisibility(View.INVISIBLE);
             uiBack2UsernameLabel.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             uiHeadingLabel.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            setMargins(uiHeadingLabel,0,40,0,20);
+            setMargins(uiBack2UsernameLabel,0,20,0,20);
             uiNextButton.setVisibility(View.INVISIBLE);
             uiBack2UsernameLabel.setText("WELCOME");
             uiHeadingLabel.setText(username);
-            (new Handler()).postDelayed(()->_context.startActivity(new Intent(_context, targetActivity)),TIME_SHORT);
         },LoadingTime);
     }
     public static void setUIInputError(String message) {
@@ -122,5 +126,12 @@ public class vLoginPageView extends vPageView {
             inputMethodManager.hideSoftInputFromWindow(v.getApplicationWindowToken(),0);
         } catch(Exception e) {}
 
+    }
+    public static void setMargins (View view, int left, int top, int right, int bottom) {
+        if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            p.setMargins(left, top, right, bottom);
+            view.requestLayout();
+        }
     }
 }

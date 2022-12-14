@@ -14,6 +14,7 @@ public class cLoginPageController {
     }
     public static String inputValidationErrorMessage() { return validationErrorMessage; }
     public static String usernameVerificationErrorMessage() { return "Username Not Found !"; }
+    public static String getUserFirstName() { return mLoginPageModel.getVerifiedUserFirstName(); }
     public static String getUserFullName() {
         return mLoginPageModel.getVerifiedUserFullname();
     }

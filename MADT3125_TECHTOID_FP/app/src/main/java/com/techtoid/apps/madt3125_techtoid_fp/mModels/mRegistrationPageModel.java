@@ -37,6 +37,7 @@ public class mRegistrationPageModel extends mPageModel {
     }
 
     public static String getYear(String dateOfBirth) {
+        if(!dateOfBirth.contains("/")) return dateOfBirth;
         System.out.println("Date of Birth : " + dateOfBirth);
         int index1 = dateOfBirth.indexOf('/');
         System.out.println("Index 1 : "+index1);

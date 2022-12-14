@@ -18,4 +18,7 @@ public class cHomePageController {
          }
          return homePageList;
     }
+    public static void saveData() {
+        mHomePageModel.saveDataToDatabase();
+    }
 }

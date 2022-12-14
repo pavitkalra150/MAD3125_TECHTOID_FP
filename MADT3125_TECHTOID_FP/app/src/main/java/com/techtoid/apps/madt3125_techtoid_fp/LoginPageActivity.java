@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import com.techtoid.apps.madt3125_techtoid_fp.vViews.vLoginPageView;
@@ -32,8 +33,10 @@ public class LoginPageActivity extends AppCompatActivity {
         vLoginPageView.NextButtonClicked(view);
         if(vLoginPageView.userIsAuthenticated) {
             vLoginPageView.startHomePageActivity(HomePageActivity.class);
-//            startActivity(new Intent(LoginPageActivity.this,RegistrationPageActivity.class));
-//            finish();
+            (new Handler()).postDelayed(()-> {
+                startActivity(new Intent(LoginPageActivity.this, HomePageActivity.class));
+                finish();
+            },2000);
         }
     }
     public void backClicked(View view) {

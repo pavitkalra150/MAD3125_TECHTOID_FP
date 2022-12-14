@@ -12,6 +12,7 @@ public class mLoginPageModel {
         _currentUser = dDatabase.Users.getUserData();
         return false;
     }
+    public static String getVerifiedUserFirstName() { return _currentUser.getFirstname();}
     public static String getVerifiedUserFullname() {
         return _currentUser.getFullname();
     }
